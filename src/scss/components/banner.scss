@@ -1,0 +1,125 @@
+.cookie-banner-section {
+  background-color: #fff;
+  padding: 32px 16px;
+  width: 100%;
+  max-width: 375px;
+  border: 2px solid #362d6e;
+  border-radius: 12px;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: none;
+  z-index: 100;
+  display: none;
+
+  @include media(desktop) {
+    padding: 48px 54px;
+    max-width: 1331px;
+    align-items: center;
+  }
+}
+
+.cookie-close-btn {
+  display: none;
+
+  @include media(desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 58px;
+  }
+}
+
+.cookie-close-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.cookie-picture-wrapper {
+  text-align: center;
+  margin-bottom: 12px;
+
+  @include media(desktop) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.cookie-icon {
+  @include media(desktop) {
+    width: 69px;
+    height: 69px;
+  }
+}
+
+.cookie-banner-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #131d1c;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 20px;
+    line-height: 1.2;
+    max-width: 608px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.cookie-banner-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media(desktop) {
+    flex-direction: row;
+    margin-left: auto;
+  }
+}
+
+.cookie-accept-btn {
+  border-radius: 8px;
+  padding: 16px 32px;
+  box-shadow: 0 3px 12px 0 rgba(74, 58, 255, 0.18);
+  background: #362d6e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #fff;
+
+  @include media(desktop) {
+    flex-direction: row;
+  }
+}
+
+.cookie-decline-btn {
+  border: 2px solid #362d6e;
+  border-radius: 8px;
+  padding: 16px 32px;
+  box-shadow: 0 4px 8px 0 rgba(74, 58, 255, 0.08);
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #362d6e;
+
+  @include media(desktop) {
+    padding: 16px 20px;
+  }
+}
+
+.show-cookie-banner {
+  display: block;
+
+  @include media(desktop) {
+    display: flex;
+  }
+}
