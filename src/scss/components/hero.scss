@@ -1,71 +1,19 @@
 .hero-section {
-  scroll-margin-top: 70px;
-
-  @include media(desktop) {
-    scroll-margin-top: 60px;
-  }
-}
-
-.hero-background-wrapper {
-  padding-top: 128px;
-  padding-bottom: 461px;
-  background-image: url(../img/hero/hero-bg-fairy-mob.png),
-    url(../img/hero/hero-bg-mob.png);
+  padding-top: 100px;
+  padding-bottom: 536px;
+  background-image: url(../img/hero/hero-cat-mob.png),
+    url(../img/hero/hero-bg-mob.jpg);
   background-repeat: no-repeat, no-repeat;
-  background-position: center bottom 29px, center bottom 95px;
+  background-position: bottom 80px center, top center;
   background-size: auto, auto;
 
   @include media(desktop) {
-    padding-top: 121px;
-    padding-bottom: 216px;
+    padding-top: 126px;
+    padding-bottom: 591px;
+    background-image: url(../img/hero/hero-steps-desk.png),
+      url(../img/hero/hero-bg-desk.jpg);
+    background-position: bottom 150px right 81px, top center;
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url(../img/hero/hero-bg-fairy-desk.png),
-      url(../img/hero/hero-bg-desk.png);
-    background-position: right 116px bottom 0px, right 54px bottom 40px;
-  }
-}
-
-.hero-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include media(desktop) {
-    align-items: start;
-    max-width: 685px;
-  }
-}
-
-.hero-title {
-  font-family: 'Gabarito', sans-serif;
-  font-weight: 700;
-  font-size: 44px;
-  line-height: 1.27273;
-  color: #fff;
-  margin-bottom: 20px;
-
-  @include media(desktop) {
-    font-weight: 600;
-    font-size: 88px;
-    line-height: 1.09091;
-    letter-spacing: -0.01em;
-    margin-bottom: 16px;
-  }
-}
-
-.hero-text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #fff;
-  margin-bottom: 0;
-
-  @include media(desktop) {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.33333;
+    margin: 0 auto;
   }
 }

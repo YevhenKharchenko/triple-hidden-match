@@ -3,6 +3,15 @@ const menuBtn = document.querySelector('.nav-btn');
 const closeContextBtn = document.querySelector('.close-btn');
 const header = document.querySelector('.header');
 
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 0) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
 menuBtn.addEventListener('click', onMenuButtonClick);
 
 let contextMenuIsOpen = false;

@@ -12,7 +12,7 @@ featuresSwiper = new Swiper('.features-swiper-container', {
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 0,
-  spaceBetween: 24,
+  spaceBetween: 20,
   grabCursor: true,
   allowTouchMove: true,
   speed: 500,
@@ -22,9 +22,8 @@ featuresSwiper = new Swiper('.features-swiper-container', {
   },
   breakpoints: {
     1440: {
-      loop: false,
       initialSlide: 0,
-      slidesPerView: 4,
+      slidesPerView: 6,
     },
   },
   on: {
