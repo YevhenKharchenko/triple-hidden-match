@@ -1,12 +1,9 @@
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
 
-// const featuresLeftArrow = document.getElementById('featuresLeftArrow');
-// const featuresRightArrow = document.getElementById('featuresRightArrow');
+let reviewsSwiper;
 
-let featuresSwiper;
-
-featuresSwiper = new Swiper('.features-swiper-container', {
+reviewsSwiper = new Swiper('.reviews-swiper-container', {
   direction: 'horizontal',
   loop: false,
   grabCursor: true,
@@ -23,14 +20,12 @@ featuresSwiper = new Swiper('.features-swiper-container', {
   breakpoints: {
     1440: {
       initialSlide: 0,
-      slidesPerView: 6,
+      slidesPerView: 4,
     },
   },
   on: {
     init: () => {
-      document
-        .querySelector('.features-swiper-container')
-        .classList.add('show');
+      document.querySelector('.reviews-swiper-container').classList.add('show');
     },
   },
 });

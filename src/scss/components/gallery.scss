@@ -1,63 +1,60 @@
 .gallery-section {
-  padding-bottom: 174px;
-  scroll-margin-top: 70px;
+  padding-bottom: 78px;
 
   @include media(desktop) {
-    scroll-margin-top: 60px;
-    padding-bottom: 162px;
+    padding-bottom: 150px;
   }
 }
 
 .gallery-section-wrapper {
-  padding-top: 19px;
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
 
   @include media(desktop) {
-    padding-top: 29px;
+    max-width: 1440px;
   }
 }
 
-.gallery-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.gallery-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.gallery-swiper-container {
+  max-width: 305px;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
 
   @include media(desktop) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    max-width: 1440px;
   }
 }
 
-.gallery-item-text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.33333;
-  text-align: center;
-  color: #fff;
-  word-break: break-word;
-  margin-top: 12px;
+.gallery-swiper-container.show {
+  visibility: visible;
+}
+
+.gallery-slide {
+  padding: 0;
+  max-width: 305px;
 }
 
 .controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
-  gap: 11px;
+  display: none;
 
   @include media(desktop) {
-    position: absolute;
-    top: 12px;
-    right: 90px;
-    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+    gap: 12px;
   }
 }
 
 .arrow-btn {
-  background-color: #2db7ba;
-  border-radius: 100%;
-  border: 4px solid #fff;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -84,4 +81,23 @@
       transform: none;
     }
   }
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 100%;
+  background: rgba(120, 228, 250, 0.5);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #78e4fa;
 }

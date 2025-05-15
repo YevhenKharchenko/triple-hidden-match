@@ -3,14 +3,23 @@ const menuBtn = document.querySelector('.nav-btn');
 const closeContextBtn = document.querySelector('.close-btn');
 const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.header');
-  if (window.scrollY > 0) {
+function updateHeaderState() {
+  const scrolled = window.scrollY > 0;
+  const menuOpen = contextMenu.classList.contains('is-open');
+
+  if (menuOpen) {
+    header.classList.add('header-menu');
+    header.classList.remove('scrolled');
+  } else if (scrolled) {
     header.classList.add('scrolled');
+    header.classList.remove('header-menu');
   } else {
     header.classList.remove('scrolled');
+    header.classList.remove('header-menu');
   }
-});
+}
+
+window.addEventListener('scroll', updateHeaderState);
 
 menuBtn.addEventListener('click', onMenuButtonClick);
 
@@ -23,7 +32,8 @@ function onMenuButtonClick() {
   contextMenu.classList.add('is-open');
   menuBtn.classList.add('closed');
   closeContextBtn.classList.add('is-open');
-  header.classList.add('header-menu');
+
+  updateHeaderState();
 
   contextMenu.addEventListener('click', onContextMenuLinkClick);
   closeContextBtn.addEventListener('click', onCloseContextButtonClick);
@@ -35,7 +45,8 @@ function onCloseContextButtonClick() {
   contextMenu.classList.remove('is-open');
   closeContextBtn.classList.remove('is-open');
   menuBtn.classList.remove('closed');
-  header.classList.remove('header-menu');
+
+  updateHeaderState();
 
   contextMenu.removeEventListener('click', onContextMenuLinkClick);
   closeContextBtn.removeEventListener('click', onCloseContextButtonClick);
